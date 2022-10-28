@@ -1,0 +1,20 @@
+require('dotenv').config();
+
+const express = require('express'); //represents the actual api
+const app = express();
+const mongoose = require('mongoose');
+
+console.log(process.env.DATABASE_URL)
+
+mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser: true });
+const db = mongoose.connection;
+db.on('error', (error) => console.error(error))
+db.once('open', () => console.log('Connected to database'))
+
+// parsing of json objects in the body
+app.use(express.json());
+
+app.listen(8080, () => console.log('Server started'));
+
+const gamesRouter = require('./routes/games');
+app.use('/games', gamesRouter)
