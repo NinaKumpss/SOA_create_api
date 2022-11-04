@@ -22,9 +22,9 @@ localhost:8080/games/{id}
 ----
 localhost:8080/games/
 {
-    "name": String,
+    "name": string,
     "completed": boolean,
-    "hours_played": Number
+    "hours_played": number
 }
 ----
 
@@ -32,9 +32,9 @@ localhost:8080/games/
 ----
 localhost:8080/games/{id}
 {
-    "name": String,
+    "name": string,
     "completed": boolean,
-    "hours_played": Number
+    "hours_played": number
 }
 ----
 
