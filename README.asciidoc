@@ -1,3 +1,44 @@
+= Games API (Nina Kumps)
+
+== Installation
+
 1. Install MongoDB locally
 2. npm install
 3. npm run dev
+
+== Routes
+
+[GET] Get all games
+----
+localhost:8080/games/
+----
+
+[GET] Get game by id
+----
+localhost:8080/games/{id}
+----
+
+[POST] Add game
+----
+localhost:8080/games/
+{
+    "name": String,
+    "completed": boolean,
+    "hours_played": Number
+}
+----
+
+[PUT] Update game by id
+----
+localhost:8080/games/{id}
+{
+    "name": String,
+    "completed": boolean,
+    "hours_played": Number
+}
+----
+
+[DELETE] Delete game by id
+----
+localhost:8080/games/{id}
+----

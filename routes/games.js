@@ -30,6 +30,8 @@ router.post('/', async (req, res) => {
     }
 });
 
+
+// update game
 router.put('/:id', getGame, async (req, res) => {
     try {
         const game = Game(req.body)
@@ -40,6 +42,7 @@ router.put('/:id', getGame, async (req, res) => {
     }
 })
 
+// delete game
 router.delete('/:id', getGame, async (req, res) => {
     try {
         await res.game.remove()
